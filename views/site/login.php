@@ -15,7 +15,7 @@ $this->title = 'Attandence Login';
         <div class="col-lg-4 col-sm-6 col-xs-10 col-lg-offset-4 col-sm-offset-3 col-xs-offset-1">
             <section class="widget widget-login animated fadeInUp">
                 <header>
-                    <h3>Login to your Dashboard</h3>
+                    <h3>Attandence System</h3>
                 </header>
                 <div class="widget-body">
                     <?php $form = ActiveForm::begin([
