@@ -38,31 +38,31 @@ $baseUrl1 = Yii::$app->request->baseUrl;
     </div>
 
 
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/widgster/widgster.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/pace.js/pace.min.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/transition.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/collapse.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/dropdown.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/button.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/tooltip.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/alert.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/jquery.slimscroll.min.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/widgster.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/pace.min.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/jquery.touchSwipe.js"></script>
 
     <!-- common app js -->
     <script src="<?php echo $baseUrl ?>/js/settings.js"></script>
     <script src="<?php echo $baseUrl ?>/js/app.js"></script>
 
     <!-- page specific libs -->
-    <script src="<?php echo $baseUrl ?>/vendor/underscore/underscore.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/jquery.sparkline/dist/jquery.sparkline.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/d3/d3.min.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/rickshaw/rickshaw.min.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/raphael/raphael-min.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/jQuery-Mapael/js/jquery.mapael.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/flot/jquery.flot.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/MetroJS/release/MetroJs.Full/MetroJs.js"></script>
-    <script src="<?php echo $baseUrl ?>/vendor/skycons/skycons.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/underscore.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/jquery.sparkline.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/d3.min.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/rickshaw.min.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/raphael-min.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/jquery.mapael.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/jquery.flot.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/MetroJs.js"></script>
+    <script src="<?php echo $baseUrl ?>/js/skycons.js"></script>
 
     <!-- page specific js -->
     <script src="<?php echo $baseUrl ?>/js/widgets.js"></script>
