@@ -9,7 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-class SiteController extends Controller
+class SiteController extends AppController
 {
     /**
      * @inheritdoc
@@ -24,7 +24,7 @@ class SiteController extends Controller
                     [
                         'actions' => ['logout'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles'  => ['@'],
                     ],
                 ],
             ],
@@ -71,17 +71,35 @@ class SiteController extends Controller
     public function actionLogin()
     {
         $this->layout = "login";
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+        if (!\Yii::$app->user->isGuest) {
+
+            return $this->redirect(['site/index']);
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->login()) {
+                $ip =Yii::$app->getRequest()->getUserIP();
+                $id = Yii::$app->user->identity->getId();
+                date_default_timezone_set('Asia/Calcutta');
+                $currentDate =  date("Y-m-d h:i:s");
+
+                $user = User::findIdentity($id);
+                $user->ip = $ip;
+                $user->login = $currentDate;
+                $user->save(false);
+
+                return $this->redirect(['site/dashboard']);
+            } else {
+                \Yii::$app->getSession()->setFlash('err', 'Invalid User or Password');
+                return $this->refresh();
+            }
+        } else {
+
+            return $this->render('login', [
+                'model' => $model,
+            ]);
         }
-        return $this->render('login', [
-            'model' => $model,
-        ]);
     }
 
     /**
@@ -92,7 +110,6 @@ class SiteController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 
@@ -106,7 +123,6 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
-
             return $this->refresh();
         }
         return $this->render('contact', [
@@ -122,5 +138,12 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionDashboard()
+    {
+        $this->allowUser(1);
+        return $this->render('dashboard', [
+
+        ]);
     }
 }
