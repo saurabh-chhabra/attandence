@@ -271,7 +271,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="widget-body">
                 <div class="widget-top-overflow text-white">
-                    <img src="demo/img/pictures/17.jpg">
+                    <img src="img/pictures/17.jpg">
                     <ul class="tags text-white pull-right">
                         <li><a href="#">design</a></li>
                         <li><a href="#">white</a></li>
@@ -279,7 +279,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="post-user mt-sm">
                             <span class="thumb pull-left mr">
-                                <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
+                                <img class="img-circle" src="img/people/a6.jpg" alt="...">
                             </span>
                     <h5 class="mb-xs mt-xs"><span class="fw-semi-bold">Maryna</span> Nilson</h5>
                     <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near Amsterdam</p>
@@ -304,7 +304,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="widget-body">
                 <div class="post-user mt-xs mb-n-lg z-index-more">
                             <span class="thumb pull-left mr">
-                                <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
+                                <img class="img-circle" src="img/people/a4.jpg" alt="...">
                             </span>
                     <h5 class="mb-xs mt-xs">Jess <span class="fw-semi-bold">@jessica</span></h5>
                     <p class="fs-mini text-white"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near Amsterdam</p>
@@ -341,7 +341,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="post-user mt-n-lg text-align-right">
                             <span class="thumb-lg pull-right ml">
-                                <img class="img-circle" src="demo/img/people/a2.jpg" alt="...">
+                                <img class="img-circle" src="img/people/a2.jpg" alt="...">
                             </span>
                     <h5 class="mt-sm fw-normal text-white">Jeremy <small class="text-white text-light">@sing</small></h5>
                     <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near Amsterdam</p>
@@ -358,7 +358,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <ul class="post-comments mt mb-0">
                     <li>
                                 <span class="thumb-xs avatar pull-left mr-sm">
-                                    <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
+                                    <img class="img-circle" src="img/people/a1.jpg" alt="...">
                                 </span>
                         <div class="comment-body">
                             <h6 class="author fw-semi-bold">Ignacio Abad <small>6 mins ago</small></h6>
@@ -382,7 +382,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-md-6">
         <section class="widget">
             <div class="widget-image text-white">
-                <img src="demo/img/pictures/18.jpg">
+                <img src="img/pictures/18.jpg">
                 <h3 class="title">
                     <span class="fw-normal">Sunnyvale</span>, CA
                 </h3>
@@ -620,7 +620,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <ul class="list-group widget-chat-list-group">
                         <li class="list-group-item">
                                 <span class="thumb">
-                                    <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
+                                    <img class="img-circle" src="img/people/a6.jpg" alt="...">
                                 </span>
                             <time class="time">10 sec ago</time>
                             <h5 class="sender">Chris Gray</h5>
@@ -636,7 +636,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </li>
                         <li class="list-group-item">
                                 <span class="thumb">
-                                    <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
+                                    <img class="img-circle" src="img/people/a6.jpg" alt="...">
                                 </span>
                             <time class="time">10 sec ago</time>
                             <h5 class="sender">Chris Gray</h5>
@@ -781,7 +781,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </p>
                         <div class="widget-footer-bottom">
                                     <span class="thumb pull-left mr">
-                                        <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
+                                        <img class="img-circle" src="img/people/a4.jpg" alt="...">
                                     </span>
                             <h4 class="no-margin mb-xs"><span class="fw-semi-bold">Miha</span> Koshir</h4>
                             <p class="text-light">@miha</p>
@@ -790,7 +790,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div>
                         <div class="clearfix mt-xs">
                                     <span class="thumb pull-left mr">
-                                        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                        <img class="img-circle" src="img/people/a3.jpg" alt="...">
                                     </span>
                             <h4 class="no-margin mb-xs"><span class="fw-semi-bold">Maryna</span> Ess</h4>
                             <p class="text-light">@ess</p>
