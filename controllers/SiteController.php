@@ -20,20 +20,23 @@ class SiteController extends AppController
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout','dashboard'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['login'],
                         'allow' => true,
-                        'roles'  => ['@'],
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['logout', 'dashboard'],
+                        'allow' => true,
+                        'roles' => ['@'],
                     ],
                 ],
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
+
             ],
         ];
     }
@@ -73,10 +76,8 @@ class SiteController extends AppController
     {
         $this->layout = "login";
         if (!\Yii::$app->user->isGuest) {
-
             return $this->redirect(['site/index']);
         }
-
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($model->login()) {
@@ -84,19 +85,16 @@ class SiteController extends AppController
                 $id = Yii::$app->user->identity->getId();
                 date_default_timezone_set('Asia/Calcutta');
                 $currentDate =  date("Y-m-d h:i:s");
-
                 $user = User::findIdentity($id);
                 $user->ip = $ip;
                 $user->login = $currentDate;
                 $user->save(false);
-
                 return $this->redirect(['site/dashboard']);
             } else {
                 \Yii::$app->getSession()->setFlash('err', 'Invalid User or Password');
                 return $this->refresh();
             }
         } else {
-
             return $this->render('login', [
                 'model' => $model,
             ]);
