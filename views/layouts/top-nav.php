@@ -64,7 +64,7 @@ use yii\helpers\Html;
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle dropdown-toggle-notifications" id="notifications-dropdown-toggle" data-toggle="dropdown">
                         <span class="thumb-sm avatar pull-left">
-                            <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                            <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a5.jpg" alt="...">
                         </span>
                         &nbsp;
                         Philip <strong>Smith</strong>&nbsp;
@@ -109,7 +109,7 @@ use yii\helpers\Html;
                             <div id="notifications-list" class="list-group thin-scroll">
                                 <div class="list-group-item">
                                     <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                        <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a3.jpg" alt="...">
                                     </span>
                                     <p class="no-margin overflow-hidden">
                                         1 new user just signed up! Check out
@@ -141,7 +141,7 @@ use yii\helpers\Html;
                                 </a>
                                 <div class="list-group-item">
                                     <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                                        <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a5.jpg" alt="...">
                                     </span>
                                     <p class="no-margin overflow-hidden">
                                         User <a href="#">Jeff</a> registered
@@ -226,7 +226,7 @@ use yii\helpers\Html;
                         <div class="chat-notification-inner">
                             <h6 class="title">
                                 <span class="thumb-xs">
-                                    <img src="demo/img/people/a6.jpg" class="img-circle mr-xs pull-left">
+                                    <img src="<?php echo $baseUrl ?>/img/people/a6.jpg" class="img-circle mr-xs pull-left">
                                 </span>
                                 Jess Smith
                             </h6>
