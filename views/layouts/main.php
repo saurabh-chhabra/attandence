@@ -12,7 +12,6 @@ $baseUrl1 = Yii::$app->request->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 
-
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
     <head>
