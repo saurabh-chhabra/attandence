@@ -38,18 +38,7 @@ use yii\helpers\Html;
         <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
             <li class="active">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fa fa-desktop"></i>
-                    </span>
-                    Dashboard
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-dashboard" class="collapse in">
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li class="active"><a href="widgets.html">Widgets</a></li>
-                </ul>
+                <?= Html::a('<span class="icon"><i class="fa fa-desktop"></i></span> Dashboard', ['site/dashboard']) ?>
             </li>
             <li>
                 <a href="inbox.html">

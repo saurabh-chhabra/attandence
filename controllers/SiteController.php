@@ -64,11 +64,22 @@ class SiteController extends AppController
      */
     public function actionIndex()
     {
+        $this->layout = "login";
         return $this->render('index', [
 
         ]);
     }
-
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            // change layout for error action
+            if ($action->id=='error')
+                $this->layout ='error';
+            return true;
+        } else {
+            return false;
+        }
+    }
     /**
      * Login action.
      *
