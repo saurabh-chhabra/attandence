@@ -64,7 +64,9 @@ class SiteController extends AppController
      */
     public function actionIndex()
     {
-        return $this->redirect(['site/login']);
+        return $this->render('index', [
+
+        ]);
     }
 
     /**
