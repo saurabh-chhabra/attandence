@@ -15,7 +15,7 @@ use yii\helpers\Html;
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo hidden-xs">
-            <a href="index.html">sing</a>
+            <?php echo Html::a('Farekit', ['site/dashboard']) ?>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
@@ -29,8 +29,8 @@ use yii\helpers\Html;
                 <span class="circle bg-warning fw-bold text-gray-dark">
                     13
                 </span>
-                &nbsp;
-                Philip <strong>Smith</strong>
+                &nbsp;&nbsp;
+                <?= Yii::$app->user->identity->firstname ?> <strong><?= Yii::$app->user->identity->lastname ?></strong>
                 <b class="caret"></b>
             </a>
             <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
