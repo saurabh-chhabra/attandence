@@ -37,7 +37,6 @@ $baseUrl = Yii::$app->request->baseUrl ;
                 </div>
             </section>
         </div>
-
     </div>
 </div>
 <?php } ?>

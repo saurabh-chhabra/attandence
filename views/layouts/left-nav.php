@@ -7,25 +7,20 @@
  */
 use yii\helpers\Html;
 
-/*$roleId = Yii::$app->controller->userData->roll_id;*/
+$roleId = Yii::$app->controller->userData->roll_id;
 
 ?>
 
 <nav id="sidebar" class="sidebar" role="navigation">
-    <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo hidden-xs">
             <?php echo Html::a('Farekit', ['site/dashboard']) ?>
         </header>
-        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
-             looks good, so adding it and enhancing with notifications -->
         <div class="sidebar-status visible-xs">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a5.jpg" alt="...">
                 </span>
-                <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
-                     should be used with bg-* and text-* classes for colors -->
                 <span class="circle bg-warning fw-bold text-gray-dark">
                     13
                 </span>
@@ -33,22 +28,36 @@ use yii\helpers\Html;
                 <?= Yii::$app->user->identity->firstname ?> <strong><?= Yii::$app->user->identity->lastname ?></strong>
                 <b class="caret"></b>
             </a>
-            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+
         </div>
-        <!-- main notification links are placed inside of .sidebar-nav -->
+
         <ul class="sidebar-nav">
             <li class="active">
                 <?= Html::a('<span class="icon"><i class="fa fa-desktop"></i></span> Dashboard', ['site/dashboard']) ?>
             </li>
+            <?php if($roleId == 3){?>
             <li>
                 <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Monthly Calc', ['site/dashboard']) ?>
             </li>
+            <?php } ?>
+            <?php if($roleId == 2){?>
+            <li>
+                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Salary Details', ['site/dashboard']) ?>
+            </li>
+
+            <li>
+                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Attendance Details', ['site/dashboard']) ?>
+            </li>
+            <?php } ?>
+            <?php if($roleId == 3){?>
             <li>
                 <?= Html::a('<span class="icon"> <i class="glyphicon glyphicon-stats"></i></span> Reports', ['site/dashboard']) ?>
             </li>
+            <?php } ?>
         </ul>
         <!-- every .sidebar-nav may have a title -->
-        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <?php if($roleId == 3){?>
+        <h5 class="sidebar-nav-title">Employee <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
@@ -56,110 +65,26 @@ use yii\helpers\Html;
                     <span class="icon">
                         <i class="glyphicon glyphicon-align-right"></i>
                     </span>
-                    Forms
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-forms" class="collapse">
-                    <li><a href="form_elements.html">Form Elements</a></li>
-                    <li><a href="form_validation.html">Form Validation</a></li>
-                    <li><a href="form_wizard.html">Form Wizard</a></li>
-                </ul>
+                    Create
+
             </li>
             <li>
                 <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="glyphicon glyphicon-tree-conifer"></i>
                     </span>
-                    UI Elements
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-ui" class="collapse">
-                    <li><a href="ui_components.html">Components</a></li>
-                    <li><a href="ui_notifications.html">Notifications</a></li>
-                    <li><a href="ui_icons.html">Icons</a></li>
-                    <li><a href="ui_buttons.html">Buttons</a></li>
-                    <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
-                    <li><a href="ui_list_groups.html">List Groups</a></li>
-                </ul>
+                    Manage
             </li>
             <li>
                 <a href="grid.html">
                     <span class="icon">
                         <i class="glyphicon glyphicon-th"></i>
                     </span>
-                    Grid
+                    View
                 </a>
-            </li>
-            <li>
-                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="glyphicon glyphicon-map-marker"></i>
-                    </span>
-                    Maps
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-maps" class="collapse">
-                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
-                         target page -->
-                    <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
-                    <li><a href="maps_vector.html">Vector Maps</a></li>
-                </ul>
-            </li>
-            <li>
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fa fa-table"></i>
-                    </span>
-                    Tables
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-tables" class="collapse">
-                    <li><a href="tables_basic.html">Tables Basic</a></li>
-                    <li><a href="tables_dynamic.html">Tables Dynamic</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fa fa-leaf"></i>
-                    </span>
-                    Extra
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-extra" class="collapse">
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="invoice.html">Invoice</a></li>
-                    <li><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
-                    <li><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="search.html">Search Results</a></li>
-                    <li><a href="time_line.html" data-no-pjax>Time Line</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fa fa-folder-open"></i>
-                    </span>
-                    Menu Levels
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-levels" class="collapse">
-                    <li><a href="#">Level 1</a></li>
-                    <li>
-                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
-                            Level 2
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-sub-levels" class="collapse">
-                            <li><a href="#">Level 3</a></li>
-                            <li><a href="#">Level 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </li>
         </ul>
+        <?php } ?>
 
     </div>
 </nav>
