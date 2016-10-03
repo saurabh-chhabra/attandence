@@ -153,9 +153,6 @@ class SiteController extends AppController
     }
     public function actionDashboard()
     {
-        $this->allowUser(2);
-        return $this->render('dashboard', [
-
-        ]);
+        return $this->redirect(['dashboard/index']);
     }
 }

@@ -78,4 +78,15 @@ class DashboardController extends AppController
 
         ]);
     }
+    public function actionSalaryDetails(){
+        return $this->render('salarydetails',[
+
+        ]);
+    }
+    public function actionAttandenceDetails(){
+        return $this->render('attandencedetails',[
+
+        ]);
+    }
+
 }
