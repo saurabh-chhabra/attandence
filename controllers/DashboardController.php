@@ -6,6 +6,7 @@
  * Time: 12:14 PM
  */
 namespace app\controllers;
+use app\models\User;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii;
@@ -49,6 +50,35 @@ class DashboardController extends AppController
         ]);
     }
     public function actionCreate(){
+        $this->allowUser(3);
+        if(Yii::$app->request->post())
+        {
+            $data = Yii::$app->request->post();
+            date_default_timezone_set('Asia/Calcutta');
+            $currentDate =  date("Y-m-d h:i:s");
+            $userFind= User::findOne(['username'=>$data['userName']]);
+            if($userFind)
+            {
+                \Yii::$app->getSession()->setFlash('warning', 'UserName Already Exists.. Please Change UserName.');
+            } else {
+                $user = new User();
+                $user->username = $data['userName'];
+                $user->firstname = $data['firstName'];
+                $user->lastname = $data['lastName'];
+                $user->email = $data['email'];
+                $user->roll_id = $data['roll_id'];
+                $user->mobile = $data['mobile'];
+                $user->setPassword($data['password']);
+                $user->generateAuthKey();
+                if ($user->save())
+                    \Yii::$app->getSession()->setFlash('success', 'Employee SuccessFully Created');
+                    else
+                        \Yii::$app->getSession()->setFlash('unsuccess', 'Error Occured while Creating New User');
+
+            }
+
+
+        }
         return $this->render('create',[
 
         ]);
