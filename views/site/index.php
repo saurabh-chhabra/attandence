@@ -32,7 +32,7 @@ $baseUrl = Yii::$app->request->baseUrl ;
                     <p class="mb-xs"><i class="fa fa-clock-o fa-3x opacity-50"></i></p>
                     <p class="text-light mb"><time id="time"></time></p>
                     <h3>
-                        <span class="fw-semi-bold">&nbsp;&nbsp;Dashboard <a href="<?= $baseUrl; ?>/site/dashboard"> <i class="fa fa-arrow-circle-o-right fa-lg "></i></a></span>
+                        <span class="fw-semi-bold">&nbsp;&nbsp;Dashboard <a href="<?= $baseUrl; ?>/dashboard"> <i class="fa fa-arrow-circle-o-right fa-lg "></i></a></span>
                     </h3>
                 </div>
             </section>
