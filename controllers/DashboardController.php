@@ -51,4 +51,31 @@ class DashboardController extends AppController
 
         ]);
     }
+    public function actionCreate(){
+        return $this->render('create',[
+
+        ]);
+    }
+    public function actionManage(){
+        return $this->render('manage',[
+
+        ]);
+    }
+    public function actionView(){
+        return $this->render('view',[
+
+        ]);
+
+    }
+    public function actionMonthlyCalculation()
+    {
+        return $this->render('monthlycalc',[
+
+        ]);
+    }
+    public function actionReports(){
+        return $this->render('reports',[
+
+        ]);
+    }
 }
