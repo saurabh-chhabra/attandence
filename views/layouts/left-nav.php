@@ -21,9 +21,7 @@ $roleId = Yii::$app->controller->userData->roll_id;
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a5.jpg" alt="...">
                 </span>
-                <span class="circle bg-warning fw-bold text-gray-dark">
-                    13
-                </span>
+
                 &nbsp;&nbsp;
                 <?= Yii::$app->user->identity->firstname ?> <strong><?= Yii::$app->user->identity->lastname ?></strong>
                 <b class="caret"></b>
