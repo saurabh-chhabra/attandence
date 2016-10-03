@@ -2,8 +2,7 @@
 
 namespace app\controllers;
 
-define('GUEST', 0);
-define('USER', 1);
+define('GUEST', 1);
 define('EMPLOYEE', 2);
 define('ADMIN', 3);
 
@@ -49,10 +48,11 @@ class AppController extends Controller
     {
         // Load the user
         if (!Yii::$app->user->isGuest) {
+
             $this->userData = Yii::$app->user->identity;
             $_SESSION['userData'] = $this->userData;
         }
-        if (Yii::$app->request->BaseUrl == "/ivory/web") {
+        if (Yii::$app->request->BaseUrl == "/attandence/web") {
             $this->baseUrl = Yii::$app->request->BaseUrl;
         } else {
             $this->baseUrl = Yii::$app->request->BaseUrl . "/web";
@@ -61,7 +61,7 @@ class AppController extends Controller
         ini_set('max_execution_time', 0);
         ini_set('memory_limit', '1024M');
 
-        Yii::$app->name = "ivory";
+        Yii::$app->name = "attandence";
     }
 
 
@@ -76,7 +76,7 @@ class AppController extends Controller
         else
             $current_level = 0;
         if ($min_level > $current_level) {
-            $this->redirect(array("/pages/not-allowed"), true);
+            $this->redirect(array("/site/not-allowed"));
             }
     }
 
@@ -89,7 +89,7 @@ class AppController extends Controller
         if ($this->userData !== null)
             $current_level = $this->userData->roll_id;
         if ($roll_level != $current_level) {
-            $this->redirect(array("/pages/not-allowed"), true);
+            $this->redirect(array("/site/not-allowed"));
         }
     }
 }
