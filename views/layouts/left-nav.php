@@ -33,25 +33,25 @@ $roleId = Yii::$app->controller->userData->roll_id;
 
         <ul class="sidebar-nav">
             <li class="active">
-                <?= Html::a('<span class="icon"><i class="fa fa-desktop"></i></span> Dashboard', ['site/dashboard']) ?>
+                <?= Html::a('<span class="icon"><i class="fa fa-desktop"></i></span> Dashboard', ['/dashboard']) ?>
             </li>
             <?php if($roleId == 3){?>
             <li>
-                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Monthly Calc', ['site/dashboard']) ?>
+                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Monthly Calc', ['dashboard/monthly-calculation']) ?>
             </li>
             <?php } ?>
             <?php if($roleId == 2){?>
             <li>
-                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Salary Details', ['site/dashboard']) ?>
+                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Salary Details', ['dashboard/salary-details']) ?>
             </li>
 
             <li>
-                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Attendance Details', ['site/dashboard']) ?>
+                <?= Html::a('<span class="icon"> <i class="fa fa-envelope"></i></span> Attendance Details', ['dashboard/attandence-details']) ?>
             </li>
             <?php } ?>
             <?php if($roleId == 3){?>
             <li>
-                <?= Html::a('<span class="icon"> <i class="glyphicon glyphicon-stats"></i></span> Reports', ['site/dashboard']) ?>
+                <?= Html::a('<span class="icon"> <i class="glyphicon glyphicon-stats"></i></span> Reports', ['dashboard/reports']) ?>
             </li>
             <?php } ?>
         </ul>
@@ -59,29 +59,15 @@ $roleId = Yii::$app->controller->userData->roll_id;
         <?php if($roleId == 3){?>
         <h5 class="sidebar-nav-title">Employee <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
         <ul class="sidebar-nav">
-            <li>
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="glyphicon glyphicon-align-right"></i>
-                    </span>
-                    Create
 
+            <li>
+                <?= Html::a('<span class="icon"><i class="glyphicon glyphicon-align-right"></i></span> Create', ['dashboard/create']) ?>
             </li>
             <li>
-                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="glyphicon glyphicon-tree-conifer"></i>
-                    </span>
-                    Manage
+                <?= Html::a('<span class="icon"><i class="glyphicon glyphicon-tree-conifer"></i></span> Manage', ['dashboard/manage']) ?>
             </li>
             <li>
-                <a href="grid.html">
-                    <span class="icon">
-                        <i class="glyphicon glyphicon-th"></i>
-                    </span>
-                    View
-                </a>
+                <?= Html::a('<span class="icon"><i class="glyphicon glyphicon-th"></i></span> View', ['dashboard/view']) ?>
             </li>
         </ul>
         <?php } ?>
