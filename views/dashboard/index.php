@@ -20,12 +20,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                                 </span>
                     </div>
                     <div class="col-xs-9">
-                        <h5 class="no-margin">USERS GROWTH</h5>
+                        <h5 class="no-margin">CURRENT USERS</h5>
                         <p class="h2 no-margin fw-normal">4,332</p>
                     </div>
                 </div>
                 <div class="col-xs-9">
-                    <h5 class="no-margin">USERS GROWTH</h5>
+                    <h5 class="no-margin">PREVIOUS USERS</h5>
                     <p class="h2 no-margin fw-normal">4,332</p>
                 </div>
             </div>
@@ -41,12 +41,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                                 </span>
                     </div>
                     <div class="col-xs-9">
-                        <h5 class="no-margin">USERS GROWTH</h5>
+                        <h5 class="no-margin"> EM. PRESENT TODAY  </h5>
                         <p class="h2 no-margin fw-normal">4,332</p>
                     </div>
                 </div>
                 <div class="col-xs-9">
-                    <h5 class="no-margin">USERS GROWTH</h5>
+                    <h5 class="no-margin">EM. PRESENT TODAY</h5>
                     <p class="h2 no-margin fw-normal">4,332</p>
                 </div>
             </div>
@@ -62,12 +62,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                                 </span>
                     </div>
                     <div class="col-xs-9">
-                        <h5 class="no-margin">USERS GROWTH</h5>
+                        <h5 class="no-margin">EM. ABSENT TODAY</h5>
                         <p class="h2 no-margin fw-normal">4,332</p>
                     </div>
                 </div>
                 <div class="col-xs-9">
-                    <h5 class="no-margin">USERS GROWTH</h5>
+                    <h5 class="no-margin">EM. ABSENT TODAY</h5>
                     <p class="h2 no-margin fw-normal">4,332</p>
                 </div>
             </div>
@@ -83,12 +83,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                                 </span>
                     </div>
                     <div class="col-xs-9">
-                        <h5 class="no-margin">USERS GROWTH</h5>
+                        <h5 class="no-margin">EM. LEAVES TODAY</h5>
                         <p class="h2 no-margin fw-normal">4,332</p>
                     </div>
                 </div>
                 <div class="col-xs-9">
-                    <h5 class="no-margin">USERS GROWTH</h5>
+                    <h5 class="no-margin">EM. LEAVES TODAY</h5>
                     <p class="h2 no-margin fw-normal">4,332</p>
                 </div>
             </div>
