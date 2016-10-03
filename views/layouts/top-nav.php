@@ -6,7 +6,7 @@
  * Time: 10:03 AM
  */
 use yii\helpers\Html;
-
+$baseUrl1 = Yii::$app->request->baseUrl ;
 ?>
 <nav class="page-controls navbar navbar-default">
     <div class="container-fluid">
@@ -24,8 +24,8 @@ use yii\helpers\Html;
                         <i class="fa fa-bars fa-lg hidden-xs"></i>
                     </a>
                 </li>
-                <li class="ml-sm mr-n-xs hidden-xs"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
-                <li class="ml-n-xs hidden-xs"><a href="#"><i class="fa fa-times fa-lg"></i></a></li>
+                <li class="ml-sm mr-n-xs hidden-xs"><a href="<?=$baseUrl1; ?>/dashboard"><i class="fa fa-refresh fa-lg"></i></a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right visible-xs">
                 <li>
@@ -49,34 +49,16 @@ use yii\helpers\Html;
 
         <!-- this part is hidden for xs screens -->
         <div class="collapse navbar-collapse">
-            <!-- search form! link it to your search server -->
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <div class="input-group input-group-no-border">
-                        <span class="input-group-addon">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        <input class="form-control" type="text" placeholder="Search Dashboard">
-                    </div>
-                </div>
-            </form>
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle dropdown-toggle-notifications" id="notifications-dropdown-toggle" data-toggle="dropdown">
                         <span class="thumb-sm avatar pull-left">
                             <img class="img-circle" src="<?php echo $baseUrl ?>/img/people/a5.jpg" alt="...">
                         </span>
+                        &nbsp;<?= Yii::$app->user->identity->firstname ?> <strong><?= Yii::$app->user->identity->lastname ?></strong>
                         &nbsp;
-                        Philip <strong>Smith</strong>&nbsp;
-                        <span class="circle bg-warning fw-bold">
-                            13
-                        </span>
-                        <b class="caret"></b></a>
-                    <!-- ready to use notifications dropdown.  inspired by smartadmin template.
-                         consists of three components:
-                         notifications, messages, progress. leave or add what's important for you.
-                         uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
-                    <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
+                        <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
                         <section class="panel notifications">
                             <header class="panel-heading">
                                 <div class="text-align-center mb-sm">
@@ -91,18 +73,7 @@ use yii\helpers\Html;
                                                data-ajax-load="demo/ajax/notifications.html"
                                                data-ajax-target="#notifications-list"> Notifications
                                     </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="demo/ajax/messages.html"
-                                               data-ajax-target="#notifications-list"> Messages
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="demo/ajax/progress.html"
-                                               data-ajax-target="#notifications-list"> Progress
-                                    </label>
+
                                 </div>
                             </header>
                             <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
@@ -212,28 +183,12 @@ use yii\helpers\Html;
                     <ul class="dropdown-menu">
                         <li><a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn">9</span></a></li>
+                        <li><a href="<?=$baseUrl1; ?>/dashboard/profile">Profile</a></li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
+                        <li><a href="<?= $baseUrl1;?>/site/logout"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" data-toggle="chat-sidebar">
-                        <i class="fa fa-globe fa-lg"></i>
-                    </a>
-                    <div id="chat-notification" class="chat-notification hide">
-                        <div class="chat-notification-inner">
-                            <h6 class="title">
-                                <span class="thumb-xs">
-                                    <img src="<?php echo $baseUrl ?>/img/people/a6.jpg" class="img-circle mr-xs pull-left">
-                                </span>
-                                Jess Smith
-                            </h6>
-                            <p class="text">Hey! What's up?</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
         </div>
     </div>
