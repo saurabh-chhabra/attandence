@@ -14,6 +14,7 @@ $baseUrl1 = Yii::$app->request->baseUrl;
     <li class="active">Create New User</li>
 </ol>
 <div class="row">
+    <div class="col-md-6 col-md-offset-3">
     <?php if (Yii::$app->session->getFlash('success')) {
     ?>
     <div class="alert alert-success alert-sm">
@@ -37,7 +38,7 @@ $baseUrl1 = Yii::$app->request->baseUrl;
         <a class="btn btn-danger btn-xs pull-right mr-xs" href="#">Take this action</a>
     </div>
     <?php } ?>
-    <div class="col-md-6 col-md-offset-3">
+
         <section class="widget">
             <header>
                 <h5>

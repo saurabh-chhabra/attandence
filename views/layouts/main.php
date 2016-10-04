@@ -62,6 +62,8 @@ $baseUrl1 = Yii::$app->request->baseUrl;
     <script src="<?php echo $baseUrl ?>/js/jquery.flot.js"></script>
     <script src="<?php echo $baseUrl ?>/js/MetroJs.js"></script>
     <script src="<?php echo $baseUrl ?>/js/skycons.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
 
     <!-- page specific js -->
     <script src="<?php echo $baseUrl ?>/js/widgets.js"></script>
