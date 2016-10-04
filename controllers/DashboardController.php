@@ -43,11 +43,14 @@ class DashboardController extends AppController
 
     public function actionIndex()
     {
+        if (\Yii::$app->user->isGuest) {
+            return $this->redirect(['site/index']);
+        }else {
+            $this->allowUser(2);
+            return $this->render('index', [
 
-        $this->allowUser(3);
-        return $this->render('index', [
-
-        ]);
+            ]);
+        }
     }
     public function actionCreate(){
         $this->allowUser(3);

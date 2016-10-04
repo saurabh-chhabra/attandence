@@ -102,7 +102,7 @@ class SiteController extends AppController
                 $user->ip = $ip;
                 $user->login = $currentDate;
                 $user->save(false);
-                return $this->redirect(['dashboard']);
+                return $this->redirect(['/dashboard/index']);
             } else {
                 \Yii::$app->getSession()->setFlash('err', 'Invalid User or Password');
                 return $this->refresh();
@@ -151,8 +151,5 @@ class SiteController extends AppController
     {
         return $this->render('about');
     }
-    public function actionDashboard()
-    {
-        return $this->redirect(['dashboard/index']);
-    }
+
 }

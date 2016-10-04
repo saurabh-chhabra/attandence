@@ -48,7 +48,6 @@ class AppController extends Controller
     {
         // Load the user
         if (!Yii::$app->user->isGuest) {
-
             $this->userData = Yii::$app->user->identity;
             $_SESSION['userData'] = $this->userData;
         }
@@ -69,10 +68,10 @@ class AppController extends Controller
 
     public function allowUser($min_level)
     {
-
         $current_level = -1;
-        if ($this->userData !== null)
+        if ($this->userData !== null) {
             $current_level = $this->userData->roll_id;
+        }
         else
             $current_level = 0;
         if ($min_level > $current_level) {
