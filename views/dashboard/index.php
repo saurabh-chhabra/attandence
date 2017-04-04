@@ -9,267 +9,275 @@ $this->title = 'Dashboard';
 $this->params['breadcrumbs'][] = $this->title;
 $baseUrl = Yii::$app->request->baseUrl . "/web";
 ?>
+<!-- begin breadcrumb -->
+<ol class="breadcrumb pull-right">
+    <li><a href="javascript:;">Home</a></li>
+    <li><a href="javascript:;">Dashboard</a></li>
+    <li class="active">Dashboard v2</li>
+</ol>
+<!-- end breadcrumb -->
+<!-- begin page-header -->
+<h1 class="page-header">Dashboard v2 <small>header small text goes here...</small></h1>
+<!-- end page-header -->
+<!-- begin row -->
 <div class="row">
+    <!-- begin col-3 -->
     <div class="col-md-3 col-sm-6">
-        <section class="widget bg-primary text-white">
-            <div class="widget-body clearfix">
-                <div class="row">
-                    <div class="col-xs-3">
-                                <span class="widget-icon">
-                                    <i class="glyphicon glyphicon-globe"></i>
-                                </span>
-                    </div>
-                    <div class="col-xs-9">
-                        <h5 class="no-margin">CURRENT USERS</h5>
-                        <p class="h2 no-margin fw-normal">4,332</p>
-                    </div>
-                </div>
+        <div class="widget widget-stats bg-blue-grey">
+            <div class="stats-icon stats-icon-lg"><i class="material-icons">people</i></div>
+            <div class="stats-title">TODAY'S VISITS</div>
+            <div class="stats-number">7,842,900</div>
+            <div class="stats-progress progress">
+                <div class="progress-bar" style="width: 70.1%;"></div>
             </div>
-        </section>
+            <div class="stats-desc">Better than last week (70.1%)</div>
+        </div>
     </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
     <div class="col-md-3 col-sm-6">
-        <section class="widget bg-info text-white">
-            <div class="widget-body clearfix">
-                <div class="row">
-                    <div class="col-xs-3">
-                                <span class="widget-icon">
-                                    <i class=" glyphicon glyphicon-user"></i>
-                                </span>
-                    </div>
-                    <div class="col-xs-9">
-                        <h5 class="no-margin">  PRESENT  </h5>
-                        <p class="h2 no-margin fw-normal">4,332</p>
-                    </div>
-                </div>
-
+        <div class="widget widget-stats bg-blue">
+            <div class="stats-icon stats-icon-lg"><i class="material-icons">attach_money</i></div>
+            <div class="stats-title">TODAY'S PROFIT</div>
+            <div class="stats-number">180,200</div>
+            <div class="stats-progress progress">
+                <div class="progress-bar" style="width: 40.5%;"></div>
             </div>
-        </section>
+            <div class="stats-desc">Better than last week (40.5%)</div>
+        </div>
     </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
     <div class="col-md-3 col-sm-6">
-        <section class="widget bg-gray text-white">
-            <div class="widget-body clearfix">
-                <div class="row">
-                    <div class="col-xs-3">
-                                <span class="widget-icon">
-                                    <i class=" glyphicon glyphicon-user"></i>
-                                </span>
-                    </div>
-                    <div class="col-xs-9">
-                        <h5 class="no-margin">ABSENT </h5>
-                        <p class="h2 no-margin fw-normal">4,332</p>
-                    </div>
-                </div>
-
+        <div class="widget widget-stats bg-cyan">
+            <div class="stats-icon stats-icon-lg"><i class="material-icons">shopping_basket</i></div>
+            <div class="stats-title">NEW ORDERS</div>
+            <div class="stats-number">38,900</div>
+            <div class="stats-progress progress">
+                <div class="progress-bar" style="width: 76.3%;"></div>
             </div>
-        </section>
+            <div class="stats-desc">Better than last week (76.3%)</div>
+        </div>
     </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
     <div class="col-md-3 col-sm-6">
-        <section class="widget bg-success text-white">
-            <div class="widget-body clearfix">
-                <div class="row">
-                    <div class="col-xs-3">
-                                <span class="widget-icon">
-                                    <i class=" glyphicon glyphicon-user"></i>
-                                </span>
-                    </div>
-                    <div class="col-xs-9">
-                        <h5 class="no-margin">LEAVES </h5>
-                        <p class="h2 no-margin fw-normal">4,332</p>
-                    </div>
-                </div>
+        <div class="widget widget-stats bg-deep-purple">
+            <div class="stats-icon stats-icon-lg"><i class="material-icons">comment</i></div>
+            <div class="stats-title">NEW COMMENTS</div>
+            <div class="stats-number">3,988</div>
+            <div class="stats-progress progress">
+                <div class="progress-bar" style="width: 54.9%;"></div>
             </div>
-        </section>
+            <div class="stats-desc">Better than last week (54.9%)</div>
+        </div>
     </div>
+    <!-- end col-3 -->
 </div>
+<!-- end row -->
 
+<!-- begin row -->
 <div class="row">
-    <div class="col-md-6">
-        <section class="widget">
-            <div class="widget-image text-white">
-                <img src="<?php echo $baseUrl ?>/img/pictures/18.jpg">
-                <h3 class="title">
-                    <span class="fw-normal">Sunnyvale</span>, CA
-                </h3>
-                <div class="info text-align-right">
-                    <i class="fa fa-map-marker h1 no-margin mr-xs"></i>
-                    <h6 class="no-margin mt-xs">FLORIDA, USA</h6>
-                    <p class="fs-sm">9:41 am</p>
-                </div>
-                <div class="forecast">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-4">
-                            <div class="row mt-xs">
-                                <div class="col-xs-6 no-padding">
-                                    <canvas id="clear-day" width="40" height="40"></canvas>
-                                    <p class="no-margin fw-normal mt-n-xs">sunny</p>
-                                </div>
-                                <div class="col-xs-6 no-padding">
-                                    <h5 class="fw-semi-bold no-margin">SUNDAY</h5>
-                                    <p class="value1 ">29&deg;</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-2 no-padding">
-                            <h6 class="no-margin">TOMMOROW</h6>
-                            <canvas class="mt-xs" id="partly-cloudy-day" width="28" height="28"></canvas>
-                            <p class="no-margin fw-semi-bold">32&deg;</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-2 no-padding">
-                            <h6 class="no-margin">TUE</h6>
-                            <canvas class="mt-xs" id="rain" width="28" height="28"></canvas>
-                            <p class="no-margin fw-semi-bold">25&deg;</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-2 no-padding">
-                            <h6 class="no-margin">WED</h6>
-                            <canvas class="mt-xs" id="clear-day-3" width="28" height="28"></canvas>
-                            <p class="no-margin fw-semi-bold">28&deg;</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-2 no-padding">
-                            <h6 class="no-margin">THU</h6>
-                            <canvas class="mt-xs" id="partly-cloudy-day-3" width="28" height="28"></canvas>
-                            <p class="no-margin fw-semi-bold">17&deg;</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-md-8">
+        <div class="widget-chart with-sidebar bg-grey-900">
+            <div class="widget-chart-content">
+                <h4 class="chart-title">
+                    Visitors Analytics
+                    <small>Where do our visitors come from</small>
+                </h4>
+                <div id="visitors-line-chart" class="morris-inverse" style="height: 260px;"></div>
             </div>
-        </section>
-        <div class="row">
-            <div class="col-sm-6">
-                <section class="widget no-padding text-align-center">
-                    <div class="row no-margin">
-                        <div class="col-xs-5 bg-danger btlr bblr">
-                            <canvas class="mt" id="clear-day-1" width="62" height="62"></canvas>
-                            <h5 class="text-white display-inline-block fw-normal">FRIDAY</h5>
-                        </div>
-                        <div class="col-xs-7">
-                            <p class="value0 text-danger mt-n-xs mr-n-xs">
-                                33&deg;
-                            </p>
-                            <p class="mt-n-sm mb-xs fw-normal fs-sm text-muted">WINDY</p>
-                            <div class="row">
-                                <div class="col-xs-6 no-padding">
-                                    <canvas id="wind-1" width="20" height="20"></canvas>
-                                    <div class="display-inline-block">
-                                        <p class="value5">4</p>
-                                        <p class="fs-sm no-margin mt-n-xs text-muted fw-normal">MPS</p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 no-padding">
-                                    <canvas id="rain-1" width="20" height="20"></canvas>
-                                    <div class="display-inline-block">
-                                        <p class="value5">52</p>
-                                        <p class="fs-sm no-margin mt-n-xs text-muted fw-normal">MM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-6">
-                <section class="widget no-padding text-align-center">
-                    <div class="row no-margin">
-                        <div class="col-xs-7 bg-success btlr bblr">
-                            <p class="value0 text-white mt-sm mr-n-xs mb-n-xs">
-                                20&deg;
-                            </p>
-                            <p class="text-white display-inline-block fw-normal display-inline-block mb">SUNDAY</p>
-                        </div>
-                        <div class="col-xs-5">
-                            <canvas class="mt" id="partly-cloudy-day-1" width="60" height="60"></canvas>
-                            <p class="fw-normal fs-sm text-muted">WINDY</p>
-                        </div>
-                    </div>
-                </section>
+            <div class="widget-chart-sidebar bg-black">
+                <div class="chart-number">
+                    1,225,729
+                    <small>visitors</small>
+                </div>
+                <div id="visitors-donut-chart" style="height: 160px"></div>
+                <ul class="chart-legend">
+                    <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> 34.0% <span>New Visitors</span></li>
+                    <li><i class="fa fa-circle-o fa-fw text-primary m-r-5"></i> 56.0% <span>Return Visitors</span></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="row">
-            <div class="col-sm-6">
-                <section class="widget widget-chart-simple widget-sm">
-                    <div class="widget-body">
-                        <h5 class="mb-xs fw-normal">
-                            Nasdaq
-                        </h5>
-                        <div class="chart-value">
-                            355 <span class="fw-semi-bold">USD</span>
-                        </div>
-                        <p>Last Sale 354.94 USD</p>
-                        <div class="chart">
-                            <div id="chart-simple"></div>
-                        </div>
-                    </div>
-                </section>
-                <section class="widget widget-sm bg-primary">
-                    <div class="widget-body">
-                        <p class="mb-xs"><i class="fa fa-arrow-circle-up fa-3x opacity-50"></i></p>
-                        <p class="text-light mb"><time>10 June</time></p>
-                        <h3>
-                            Lots of <span class="fw-semi-bold">new</span> amazing possibilities
-                        </h3>
-                        <p class="fs-mini mt">
-                            <span class="fw-semi-bold">214</span> likes
-                            &nbsp;
-                            <span class="fw-semi-bold">96</span> comments
-                        </p>
-                    </div>
-                </section>
+    <div class="col-md-4">
+        <div class="panel panel-inverse" data-sortable-id="index-1">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Visitors Origin
+                </h4>
             </div>
-            <div class="col-sm-6">
-                <section class="widget widget-sm bg-success text-white">
-                    <div class="widget-body">
-                        <p class="mb-xs"><i class="fa fa-comments fa-2x"></i></p>
-                        <h4>
-                            Lots of <span class="fw-semi-bold">possibilities</span> to customize your
-                            new <span class="fw-semi-bold">admin template</span>
-                        </h4>
-                        <p class="fs-mini mt-sm">
-                            <span class="fw-semi-bold">83</span> likes
-                            &nbsp;
-                            <span class="fw-semi-bold">96</span> comments
-                            &nbsp;
-                            <span class="fw-semi-bold">7</span> shares
-                        </p>
-                        <p class="text-light fs-sm mt-lg"><time>10 June</time></p>
-                    </div>
-                </section>
-                <section class="widget widget-sm">
-                    <header>
-                        <h5>Server <span class="fw-semi-bold">Overview</span></h5>
-                    </header>
-                    <div class="widget-body">
-                        <div class="clearfix fs-mini">
-                            <span class="pull-right no-margin fw-semi-bold">CPU</span>
-                            <span class="fs-mini">60% / 37°C / 3.3 Ghz</span>
-                        </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                        <div class="clearfix fs-mini mt">
-                            <span class="pull-right no-margin fw-semi-bold">Mem</span>
-                            <span class="fs-mini">29% / 4GB (16 GB)</span>
-                        </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
-                        </div>
-                        <div class="clearfix fs-mini mt">
-                            <span class="pull-right no-margin fw-semi-bold">LAN</span>
-                            <span class="fs-mini">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></span>
-                        </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
-                        </div>
-                        <div class="clearfix fs-mini mt">
-                            <span class="pull-right no-margin fw-semi-bold">Access</span>
-                            <span class="fs-mini">17 Mb/s <i class="fa fa-caret-up"></i> &nbsp; (+18%)</span>
-                        </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-success" style="width: 64%;"></div>
-                        </div>
-                    </div>
-                </section>
+            <div id="visitors-map" class="bg-black" style="height: 173px;"></div>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
+                    <span class="badge badge-success">20.95%</span>
+                    1. United State
+                </a>
+                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
+                    <span class="badge badge-primary">16.12%</span>
+                    2. India
+                </a>
+                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
+                    <span class="badge badge-inverse">14.99%</span>
+                    3. South Korea
+                </a>
             </div>
         </div>
     </div>
 </div>
+<!-- end row -->
+<!-- begin row -->
+<div class="row">
+    <!-- begin col-4 -->
+    <div class="col-md-4">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" data-sortable-id="index-2">
+            <div class="panel-heading">
+                <h4 class="panel-title">Chat History <span class="label label-success pull-right">4 message</span></h4>
+            </div>
+            <div class="panel-body bg-grey-200">
+                <div data-scrollbar="true" data-height="227px">
+                    <ul class="chats">
+                        <li class="left">
+                            <span class="date-time">yesterday 11:23pm</span>
+                            <a href="javascript:;" class="name">Sowse Bawdy</a>
+                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-12.jpg" /></a>
+                            <div class="message">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat. Praesent mattis interdum arcu eu feugiat.
+                            </div>
+                        </li>
+                        <li class="right">
+                            <span class="date-time">08:12am</span>
+                            <a href="#" class="name"><span class="label label-primary">ADMIN</span> Me</a>
+                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-13.jpg" /></a>
+                            <div class="message">
+                                Nullam posuere, nisl a varius rhoncus, risus tellus hendrerit neque.
+                            </div>
+                        </li>
+                        <li class="left">
+                            <span class="date-time">09:20am</span>
+                            <a href="#" class="name">Neck Jolly</a>
+                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-10.jpg" /></a>
+                            <div class="message">
+                                Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </div>
+                        </li>
+                        <li class="left">
+                            <span class="date-time">11:15am</span>
+                            <a href="#" class="name">Shag Strap</a>
+                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-14.jpg" /></a>
+                            <div class="message">
+                                Nullam iaculis pharetra pharetra. Proin sodales tristique sapien mattis placerat.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <form name="send_message_form" data-id="message-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-sm" name="message" placeholder="Enter your message here.">
+                        <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" type="button">Send</button>
+                                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+    <!-- end col-4 -->
+    <!-- begin col-4 -->
+    <div class="col-md-4">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" data-sortable-id="index-3">
+            <div class="panel-heading">
+                <h4 class="panel-title">Today's Schedule</h4>
+            </div>
+            <div id="schedule-calendar" class="bootstrap-calendar"></div>
+            <div class="list-group">
+                <a href="#" class="list-group-item text-ellipsis">
+                    <span class="badge badge-success">9:00 am</span> Sales Reporting
+                </a>
+                <a href="#" class="list-group-item text-ellipsis">
+                    <span class="badge badge-primary">2:45 pm</span> Have a meeting with sales team
+                </a>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+    <!-- end col-4 -->
+    <!-- begin col-4 -->
+    <div class="col-md-4">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" data-sortable-id="index-4">
+            <div class="panel-heading">
+                <h4 class="panel-title">New Registered Users <span class="pull-right label label-success">24 new users</span></h4>
+            </div>
+            <ul class="registered-users-list clearfix">
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-5.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Savory Posh
+                        <small>Algerian</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-3.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Ancient Caviar
+                        <small>Korean</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-1.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Marble Lungs
+                        <small>Indian</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-8.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Blank Bloke
+                        <small>Japanese</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-2.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Hip Sculling
+                        <small>Cuban</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-6.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Flat Moon
+                        <small>Nepalese</small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-4.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Packed Puffs
+                        <small>Malaysian></small>
+                    </h4>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="assets/img/user-9.jpg" alt="" /></a>
+                    <h4 class="username text-ellipsis">
+                        Clay Hike
+                        <small>Swedish</small>
+                    </h4>
+                </li>
+            </ul>
+            <div class="panel-footer text-center">
+                <a href="javascript:;" class="text-inverse">View All</a>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+    <!-- end col-4 -->
+</div>
+<!-- end row -->
