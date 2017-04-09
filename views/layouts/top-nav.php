@@ -7,6 +7,7 @@
  */
 use yii\helpers\Html;
 $baseUrl1 = Yii::$app->request->baseUrl ;
+$fullName = Yii::$app->controller->userData->firstname . " " . Yii::$app->controller->userData->lastname ;
 ?>
 <div id="header" class="header navbar navbar-default navbar-fixed-top">
     <!-- begin container-fluid -->
@@ -23,8 +24,8 @@ $baseUrl1 = Yii::$app->request->baseUrl ;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index-2.html" class="navbar-brand">
-                Color Admin Material
+            <a href="javascript;;" class="navbar-brand">
+                Global Tech Securities
             </a>
         </div>
         <!-- end mobile sidebar expand / collapse button -->
@@ -95,7 +96,7 @@ $baseUrl1 = Yii::$app->request->baseUrl ;
             <li class="dropdown navbar-user">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="assets/img/user.jpg" alt="" />
-                    <span class="hidden-xs">Hi, John Smith</span>
+                    <span class="hidden-xs">Hi, <?= $fullName ?></span>
                 </a>
                 <ul class="dropdown-menu animated fadeInLeft">
                     <li class="arrow"></li>
@@ -104,7 +105,7 @@ $baseUrl1 = Yii::$app->request->baseUrl ;
                     <li><a href="javascript:;">Calendar</a></li>
                     <li><a href="javascript:;">Setting</a></li>
                     <li class="divider"></li>
-                    <li><a href="javascript:;">Log Out</a></li>
+                    <li><a href="<?= $baseUrl1 ?>/site/logout">Log Out</a></li>
                 </ul>
             </li>
         </ul>

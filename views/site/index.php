@@ -3,43 +3,36 @@
 $this->title = 'Attandence';
 $baseUrl = Yii::$app->request->baseUrl ;
 ?>
-<?php
-    if(Yii::$app->user->isGuest) { ?>
-<div class="col-md-6 col-md-offset-3">
-    <div class="row" style="margin-top: 50%;">
-        <div class="col-sm-6 col-md-offset-3">
+<div class="right-content">
+    <!-- begin login-header -->
+    <div class="login-header">
+        <div class="brand">
+            <span class="logo"></span> Global Tech
 
-            <section class="widget widget-sm bg-primary">
-                <div class="widget-body">
-                    <p class="mb-xs"><i class="fa fa-clock-o fa-3x opacity-50"></i></p>
-                    <p class="text-light mb"><time id="time"></time></p>
-                    <h3>
-                     <span class="fw-semi-bold">&nbsp;&nbsp;Pease Login <a href="<?= $baseUrl; ?>/login"> <i class="fa fa-arrow-circle-o-right fa-lg "></i></a></span>
-                    </h3>
-                </div>
-            </section>
         </div>
-
-    </div>
-</div>
-<?php } else { ?>
-<div class="col-md-6 col-md-offset-3">
-    <div class="row" style="margin-top: 50%;">
-        <div class="col-sm-6 col-md-offset-3">
-
-            <section class="widget widget-sm bg-primary">
-                <div class="widget-body">
-                    <p class="mb-xs"><i class="fa fa-clock-o fa-3x opacity-50"></i></p>
-                    <p class="text-light mb"><time id="time"></time></p>
-                    <h3>
-                        <span class="fw-semi-bold">&nbsp;&nbsp;Dashboard <a href="<?= $baseUrl; ?>/dashboard"> <i class="fa fa-arrow-circle-o-right fa-lg "></i></a></span>
-                    </h3>
-                </div>
-            </section>
+        <div class="icon">
+            <i class="material-icons">lock</i>
         </div>
     </div>
+    <div class="login-content">
+
+
+        <div class="login-buttons">
+            <?php
+            if(Yii::$app->user->isGuest) { ?>
+            <a href="<?= $baseUrl; ?>/login" class="btn btn-info btn-block btn-lg">Please Login</a>
+            <?php } else { ?>
+            <a href="<?= $baseUrl; ?>/dashboard" class="btn btn-info btn-block btn-lg">Dashboard</a>
+            <?php } ?>
+
+        </div>
+
+
+
+
+    </div>
+    <!-- end login-content -->
 </div>
-<?php } ?>
 <script>
     (function () {
         function checkTime(i) {

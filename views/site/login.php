@@ -10,42 +10,42 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Attandence Login';
 
 ?>
-<main id="content" class="widget-login-container" role="main">
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 col-xs-10 col-lg-offset-4 col-sm-offset-3 col-xs-offset-1">
-            <section class="widget widget-login animated fadeInUp">
-                <header>
-                    <h3>Attandence System</h3>
-                </header>
-                <div class="widget-body">
-                    <?php $form = ActiveForm::begin([
-                            'id' => 'login-form',
-                            'options' => ['class' => 'form-horizontal mt-lg'],
-                            'fieldConfig' => [
-                                'template' => "{label}<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-lg-offset-3 col-lg-9\">{error}</div>",
-                                'labelOptions' => ['class' => 'col-lg-3 control-label'],
-                            ],
-                        ]); ?>
+<div class="right-content">
+    <!-- begin login-header -->
+    <div class="login-header">
+        <div class="brand">
+            <span class="logo"></span> Global Tech
 
-                        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-                        <?= $form->field($model, 'password')->passwordInput() ?>
-
-                        <?= $form->field($model, 'rememberMe')->checkbox([
-                            'template' => "<div class=\"col-lg-offset-1 col-lg-9\">{input} {label}</div>\n<div class=\"col-lg-offset-3  col-lg-9\">{error}</div>",
-                        ]) ?>
-
-                        <div class="form-group">
-                            <div class="col-lg-offset-1 col-lg-11">
-                                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                            </div>
-                        </div>
-
-                        <?php ActiveForm::end(); ?>
-                </div>
-            </section>
+        </div>
+        <div class="icon">
+            <i class="material-icons">lock</i>
         </div>
     </div>
-</main>
+    <div class="login-content">
+        <?php $form = ActiveForm::begin([
+            'id' => 'login-form',
+            'options' => ['class' => 'margin-bottom-0'],
+            'fieldConfig' => [
+                'template' => "<div class=\"form-group m-b-15\">{input}</div>\n<div class=\"col-lg-offset-3 col-lg-9\">{error}</div>"
+
+            ],
+        ]); ?>
+
+        <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>"form-control input-lg input-lg"]) ?>
+
+        <?= $form->field($model, 'password')->passwordInput(['class'=>"form-control input-lg input-lg"]) ?>
+
+        <?= $form->field($model, 'rememberMe')->checkbox([
+            'template' => "<div class=\"checkbox m-b-30\"><label>{input} Remember Me </label></div>\n<div class=\"col-lg-offset-3  col-lg-9\">{error}</div>",
+        ]) ?>
+
+        <div class="login-buttons">
+            <?= Html::submitButton('Sign me in', ['class' => 'btn btn-info btn-block btn-lg', 'name' => 'login-button']) ?>
+        </div>
+
+        <?php ActiveForm::end(); ?>
 
 
+    </div>
+    <!-- end login-content -->
+</div>

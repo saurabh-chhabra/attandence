@@ -12,12 +12,11 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
 <!-- begin breadcrumb -->
 <ol class="breadcrumb pull-right">
     <li><a href="javascript:;">Home</a></li>
-    <li><a href="javascript:;">Dashboard</a></li>
-    <li class="active">Dashboard v2</li>
+    <li class="active">Dashboard</a></li>
 </ol>
 <!-- end breadcrumb -->
 <!-- begin page-header -->
-<h1 class="page-header">Dashboard v2 <small>header small text goes here...</small></h1>
+<h1 class="page-header">Dashboard </h1>
 <!-- end page-header -->
 <!-- begin row -->
 <div class="row">
@@ -78,7 +77,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
 
 <!-- begin row -->
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="widget-chart with-sidebar bg-grey-900">
             <div class="widget-chart-content">
                 <h4 class="chart-title">
@@ -100,30 +99,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="panel panel-inverse" data-sortable-id="index-1">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    Visitors Origin
-                </h4>
-            </div>
-            <div id="visitors-map" class="bg-black" style="height: 173px;"></div>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                    <span class="badge badge-success">20.95%</span>
-                    1. United State
-                </a>
-                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                    <span class="badge badge-primary">16.12%</span>
-                    2. India
-                </a>
-                <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                    <span class="badge badge-inverse">14.99%</span>
-                    3. South Korea
-                </a>
-            </div>
-        </div>
-    </div>
+ 
 </div>
 <!-- end row -->
 <!-- begin row -->
@@ -141,7 +117,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                         <li class="left">
                             <span class="date-time">yesterday 11:23pm</span>
                             <a href="javascript:;" class="name">Sowse Bawdy</a>
-                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-12.jpg" /></a>
+                            <a href="javascript:;" class="image"><img alt="" src="<?= $baseUrl ?>/img/user-12.jpg" /></a>
                             <div class="message">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat. Praesent mattis interdum arcu eu feugiat.
                             </div>
@@ -149,7 +125,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                         <li class="right">
                             <span class="date-time">08:12am</span>
                             <a href="#" class="name"><span class="label label-primary">ADMIN</span> Me</a>
-                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-13.jpg" /></a>
+                            <a href="javascript:;" class="image"><img alt="" src="<?= $baseUrl ?>/img/user-13.jpg" /></a>
                             <div class="message">
                                 Nullam posuere, nisl a varius rhoncus, risus tellus hendrerit neque.
                             </div>
@@ -157,7 +133,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                         <li class="left">
                             <span class="date-time">09:20am</span>
                             <a href="#" class="name">Neck Jolly</a>
-                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-10.jpg" /></a>
+                            <a href="javascript:;" class="image"><img alt="" src="<?= $baseUrl ?>/img/user-10.jpg" /></a>
                             <div class="message">
                                 Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                             </div>
@@ -165,7 +141,7 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
                         <li class="left">
                             <span class="date-time">11:15am</span>
                             <a href="#" class="name">Shag Strap</a>
-                            <a href="javascript:;" class="image"><img alt="" src="assets/img/user-14.jpg" /></a>
+                            <a href="javascript:;" class="image"><img alt="" src="<?= $baseUrl ?>/img/user-14.jpg" /></a>
                             <div class="message">
                                 Nullam iaculis pharetra pharetra. Proin sodales tristique sapien mattis placerat.
                             </div>
@@ -216,56 +192,56 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
             </div>
             <ul class="registered-users-list clearfix">
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-5.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-5.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Savory Posh
                         <small>Algerian</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-3.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-3.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Ancient Caviar
                         <small>Korean</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-1.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-1.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Marble Lungs
                         <small>Indian</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-8.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-8.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Blank Bloke
                         <small>Japanese</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-2.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-2.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Hip Sculling
                         <small>Cuban</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-6.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-6.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Flat Moon
                         <small>Nepalese</small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-4.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-4.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Packed Puffs
                         <small>Malaysian></small>
                     </h4>
                 </li>
                 <li>
-                    <a href="javascript:;"><img src="assets/img/user-9.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="<?= $baseUrl ?>/img/user-9.jpg" alt="" /></a>
                     <h4 class="username text-ellipsis">
                         Clay Hike
                         <small>Swedish</small>
