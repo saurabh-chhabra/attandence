@@ -84,9 +84,13 @@ class AppController extends Controller
      */
     public function allowOnly($roll_level)
     {
+
         $current_level = -1;
-        if ($this->userData !== null)
+        if ($this->userData !== null){
             $current_level = $this->userData->roll_id;
+        }
+
+
         if ($roll_level != $current_level) {
             $this->redirect(array("/site/not-allowed"));
         }

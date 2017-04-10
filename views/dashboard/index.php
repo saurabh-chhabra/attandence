@@ -24,12 +24,11 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-blue-grey">
             <div class="stats-icon stats-icon-lg"><i class="material-icons">people</i></div>
-            <div class="stats-title">TODAY'S VISITS</div>
+            <div class="stats-title">TOTAL SALES</div>
             <div class="stats-number">7,842,900</div>
             <div class="stats-progress progress">
                 <div class="progress-bar" style="width: 70.1%;"></div>
             </div>
-            <div class="stats-desc">Better than last week (70.1%)</div>
         </div>
     </div>
     <!-- end col-3 -->
@@ -37,12 +36,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-blue">
             <div class="stats-icon stats-icon-lg"><i class="material-icons">attach_money</i></div>
-            <div class="stats-title">TODAY'S PROFIT</div>
+            <div class="stats-title">TODAY'S SALE</div>
             <div class="stats-number">180,200</div>
             <div class="stats-progress progress">
                 <div class="progress-bar" style="width: 40.5%;"></div>
             </div>
-            <div class="stats-desc">Better than last week (40.5%)</div>
+
         </div>
     </div>
     <!-- end col-3 -->
@@ -50,12 +49,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-cyan">
             <div class="stats-icon stats-icon-lg"><i class="material-icons">shopping_basket</i></div>
-            <div class="stats-title">NEW ORDERS</div>
+            <div class="stats-title">PENDING BALANCE</div>
             <div class="stats-number">38,900</div>
             <div class="stats-progress progress">
                 <div class="progress-bar" style="width: 76.3%;"></div>
             </div>
-            <div class="stats-desc">Better than last week (76.3%)</div>
+
         </div>
     </div>
     <!-- end col-3 -->
@@ -63,12 +62,12 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-deep-purple">
             <div class="stats-icon stats-icon-lg"><i class="material-icons">comment</i></div>
-            <div class="stats-title">NEW COMMENTS</div>
+            <div class="stats-title">TOP USERS</div>
             <div class="stats-number">3,988</div>
             <div class="stats-progress progress">
                 <div class="progress-bar" style="width: 54.9%;"></div>
             </div>
-            <div class="stats-desc">Better than last week (54.9%)</div>
+
         </div>
     </div>
     <!-- end col-3 -->
@@ -81,21 +80,17 @@ $baseUrl = Yii::$app->request->baseUrl . "/web";
         <div class="widget-chart with-sidebar bg-grey-900">
             <div class="widget-chart-content">
                 <h4 class="chart-title">
-                    Visitors Analytics
-                    <small>Where do our visitors come from</small>
+                    Employee Stats
+                    <small>Complete Sale Analysis of Employee</small>
                 </h4>
                 <div id="visitors-line-chart" class="morris-inverse" style="height: 260px;"></div>
             </div>
             <div class="widget-chart-sidebar bg-black">
                 <div class="chart-number">
-                    1,225,729
-                    <small>visitors</small>
+                   User Sale Chart
+                    <small>Weekly</small>
                 </div>
                 <div id="visitors-donut-chart" style="height: 160px"></div>
-                <ul class="chart-legend">
-                    <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> 34.0% <span>New Visitors</span></li>
-                    <li><i class="fa fa-circle-o fa-fw text-primary m-r-5"></i> 56.0% <span>Return Visitors</span></li>
-                </ul>
             </div>
         </div>
     </div>

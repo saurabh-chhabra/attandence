@@ -97,11 +97,12 @@ class SiteController extends AppController
                 $ip =Yii::$app->getRequest()->getUserIP();
                 $id = Yii::$app->user->identity->getId();
                 date_default_timezone_set('Asia/Calcutta');
-                $currentDate =  date("Y-m-d h:i:s");
-                $user = User::findIdentity($id);
+                $currentDate =  date("Y-m-d");
+                /*$user = User::findIdentity($id);
                 $user->ip = $ip;
                 $user->login = $currentDate;
-                $user->save(false);
+                $user->save(false);*/
+
                 return $this->redirect(['/dashboard/index']);
             } else {
                 \Yii::$app->getSession()->setFlash('err', 'Invalid User or Password');
@@ -147,9 +148,10 @@ class SiteController extends AppController
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionNotAllowed()
     {
-        return $this->render('about');
+        $this->layout = "error";
+        return $this->render('not-allowed');
     }
 
 }

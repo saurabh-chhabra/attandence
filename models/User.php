@@ -23,11 +23,11 @@ use yii\web\IdentityInterface;
  * @property string $lastname
  * @property string $dob
  * @property string $address
+ * @property string $father_name
  * @property string $mobile
+ * @property string $phone
  * @property string $update_date
- * @property string $ip
- * @property string $login
- *@property string $logout
+ * @property string $profile_img
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -46,13 +46,13 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'auth_key', 'password_hash', 'roll_id', 'firstname', 'lastname'], 'required'],
-            [['created_at', 'dob', 'update_date', 'login', 'logout'], 'safe'],
+            [['created_at', 'dob', 'update_date'], 'safe'],
             [['roll_id'], 'integer'],
-            [['username', 'password_hash', 'password_reset_token', 'email', 'firstname', 'lastname', 'address', 'mobile'], 'string', 'max' => 255],
+            [['username', 'password_hash', 'password_reset_token', 'email', 'firstname', 'lastname', 'father_name','address', 'mobile','profile_img','phone'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
-            [['auth_key'], 'unique'],
-            [['ip'], 'string','max' => 45]
+            [['auth_key'], 'unique']
+
         ];
     }
 
@@ -72,13 +72,13 @@ class User extends ActiveRecord implements IdentityInterface
             'roll_id' => 'Roll ID',
             'firstname' => 'Firstname',
             'lastname' => 'Lastname',
+            'father_name'=> 'Father Name',
             'dob' => 'Dob',
             'address' => 'Address',
             'mobile' => 'Mobile',
+            'phone' => 'Phone',
             'update_date' => 'Update Date',
-            'ip' => 'Ip',
-            'login' => 'Login',
-            'logout'=> 'Logout'
+            'profile_img' => 'Profile Img'
         ];
     }
 

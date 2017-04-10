@@ -10,26 +10,16 @@ use yii\helpers\Html;
 $this->title = 'Not Allowed';
 ?>
 
-<main id="content" class="error-container" role="main">
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 col-xs-10 col-lg-offset-4 col-sm-offset-3 col-xs-offset-1">
-            <div class="error-container">
-                <h2 ><?= Html::encode($this->title) ?></h2>
-                <p class="error-info">
-                    <?= 'You Are Not Authorised User To Access This Page ' ?>
-                </p>
-                <p class="error-help mb">
-                    The above error occurred while the Web server was not authenticating your request.
-                </p>
-                <p class="error-help mb">
-                    Please contact us . Thank you.
-                </p>
-
-            </div>
+<div class="error">
+    <div class="error-code m-b-10 text-yellow"><?= Html::encode($this->title) ?> <i class="material-icons">warning</i></div>
+    <div class="error-content bg-grey-700">
+        <div class="error-message"><?= nl2br(Html::encode($message)) ?></div>
+        <div class="error-desc m-b-20">
+            The above error occurred while the Web server was processing your request. <br />
+            Please contact us if you think this is a server error. Thank you.
+        </div>
+        <div>
+            <a href="javascript;;" class="btn btn-inverse text-yellow"><i class="material-icons pull-left f-s-18 m-t-1 m-r-5">arrow_back</i> Back to Home Page</a>
         </div>
     </div>
-</main>
-
-<footer class="page-footer">
-    2016 &copy; Farekit.
-</footer>
+</div>

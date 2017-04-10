@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'Attandence';
+$this->title = 'Global Tech Securities';
 $baseUrl = Yii::$app->request->baseUrl ;
 ?>
 <div class="right-content">

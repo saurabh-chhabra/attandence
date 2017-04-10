@@ -42,17 +42,24 @@ $fullName = Yii::$app->controller->userData->firstname . " " . Yii::$app->contro
         <ul class="nav">
             <li class="nav-header">Menus</li>
             <li class="has-sub active">
-                <a href="javascript:;">
-                    <i class="material-icons">home</i>
-                    <span>Dashboard</span>
-                </a>
+                <?= Html::a('<i class="material-icons">home</i><span>Dashboard</span>', ['dashboard/']) ?>
             </li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <i class="material-icons">inbox</i>
-                    <span>Employee</span>
-                </a>
-            </li>
+            <?php if($roleId == 3){?>
+                <li class="has-sub">
+                    <a href="javascript:;">
+                        <b class="caret pull-right"></b>
+                        <i class="material-icons">toys</i>
+                        <span>Employee</span>
+                    </a>
+                    <ul class="sub-menu">
+
+                        <li><?= Html::a('<span>View</span>', ['employee/']) ?></li>
+                        <li><?= Html::a('<span>Create</span>', ['employee/create']) ?></li>
+                        </ul>
+                </li>
+
+            <?php } ?>
+
             <li class="has-sub">
                 <a href="javascript:;">
                     <i class="material-icons">toys</i>
@@ -68,25 +75,28 @@ $fullName = Yii::$app->controller->userData->firstname . " " . Yii::$app->contro
             </li>
             <li class="has-sub">
                 <a href="javascript:;">
-                    <b class="caret pull-right"></b>
-                    <i class="material-icons">grid_on</i>
-                    <span>Sales</span>
-                </a>
-            </li>
-            <li class="has-sub">
-                <a href="javascript:;">
                     <i class="material-icons">polymer</i>
                     <span>Invoice <span class="label label-theme m-l-5">NEW</span></span>
                 </a>
 
             </li>
+
+
+            <?php if($roleId == 3){?>
+                <li class="has-sub">
+                    <a href="javascript:;">
+                        <b class="caret pull-right"></b>
+                        <i class="material-icons">grid_on</i>
+                        <span>Sales</span>
+                    </a>
+                </li>
             <li class="has-sub">
                 <a href="javascript:;">
                     <i class="material-icons">email</i>
                     <span>Reports</span>
                 </a>
             </li>
-
+            <?php } ?>
 
 
             <!-- begin sidebar minify button -->
